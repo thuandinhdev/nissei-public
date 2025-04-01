@@ -10210,7 +10210,7 @@ environment = {
     production: false,
     // apiUrl: 'http://chetsapp.de:8899'
     // apiUrl: 'http://dev.vipspm.chetsapp.de'
-    apiUrl: 'https://vn-sys.eblo.biz/public'
+    apiUrl: 'https://vn-sys.eblo.biz'
 };
 
 
