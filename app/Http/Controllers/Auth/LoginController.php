@@ -50,9 +50,7 @@ class LoginController extends Controller
 
     public function handleMicrosoftCallback(Request $request)
     {
-        dd('test');
         $microsoftUser = Socialite::driver('azure')->user();
-        dd($microsoftUser);
         try {
             $checkEmail = User::where('email', $microsoftUser->email)->count();
             $fullName = $microsoftUser->getName();
@@ -60,11 +58,11 @@ class LoginController extends Controller
             $firstName = $nameParts[0] ?? '';
             $lastName = $nameParts[1] ?? '';
             if($checkEmail > 0){
-                return redirect("http://localhost:4200/#/login?token=".$microsoftUser->token."&e=".base64_encode($microsoftUser->email));
+                return redirect("https://vn-sys.eblo.biz/#/login?token=".$microsoftUser->token."&e=".base64_encode($microsoftUser->email));
             } else {
-                if(explode('@', $microsoftUser->email, 2)[1] != 'greenviet.net'){
-                    return redirect("http://localhost:4200/#/login?msg=".base64_encode('Email does not exist'));
-                }
+                // if(explode('@', $microsoftUser->email, 2)[1] != 'greenviet.net'){
+                //     return redirect("https://vn-sys.eblo.biz/#/login?msg=".base64_encode('Email does not exist'));
+                // }
                 $user = [];
                 $user['firstname'] = ucwords($firstName);
                 $user['lastname'] = ucwords($lastName);
@@ -81,15 +79,15 @@ class LoginController extends Controller
                 $user = User::insert($userData);
                 DB::table('gv_user_role_department')->insert([
                     'user_id' => User::max('id'),
-                    'department_id'=>2,
+                    'department_id'=>1,
                     'role_id'=>2,
                 ]);
-                return redirect("http://localhost:4200/#/login?token=".$microsoftUser->token."&e=".base64_encode($microsoftUser->email));
-                // return redirect("http://localhost:4200/#/login?msg=".base64_encode('Email does not exist'));
+                return redirect("https://vn-sys.eblo.biz/#/login?token=".$microsoftUser->token."&e=".base64_encode($microsoftUser->email));
+                // return redirect("https://vn-sys.eblo.biz/#/login?msg=".base64_encode('Email does not exist'));
             }
         } catch (\Throwable $th) {
             dd($th);
-            return redirect("http://localhost:4200/#/login");
+            return redirect("https://vn-sys.eblo.biz/#/login");
         }
     }
     public function create($request)
