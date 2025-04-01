@@ -77,7 +77,7 @@ class LoginController extends Controller
                 $userData['is_active'] = 1;
                 $userData['email_verified'] = 1;
                 $user = User::insert($userData);
-                DB::table('gv_user_role_department')->insert([
+                DB::table('eblo_user_role_department')->insert([
                     'user_id' => User::max('id'),
                     'department_id'=>1,
                     'role_id'=>2,
