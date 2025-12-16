@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section>\r\n\t<div class=\"row\">\r\n\t\t<div class=\"col-sm-12\">\r\n\t\t\t<div class=\"card pl-2 pr-2 pb-3\">\r\n\t\t\t\t<div class=\"row\">\r\n\t\t\t\t\t<div class=\"col-sm-6\">\r\n\t\t\t\t\t\t<h4 class=\"main-title pt-2 mt-2\"><span>{{'calendar.title' | translate}}</span></h4>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"col-sm-6\">\r\n\t\t\t\t\t\t<div *ngIf=\"showTimer\" style=\"margin-top: 10px;\">\r\n\t\t\t\t\t\t\t<ng-container *ngIf=\"isTimerStarted else elseBlock10\">\r\n\t\t\t\t\t\t\t\t<button class=\"btn btn-create mb-0 mb-lg-0 float-right\" tooltip=\"{{'timer_logs.title1' | translate}}\" (click)=\"stopTimer(true)\"><i class=\"fa fa-stop-circle\" aria-hidden=\"true\"></i></button>\r\n\t\t\t\t\t\t\t</ng-container>\r\n\t\t\t\t\t\t\t<ng-template #elseBlock10>\r\n\t\t\t\t\t\t\t\t<button class=\"btn btn-create mb-0 mb-lg-0 float-right\" tooltip=\"{{'timer_logs.title' | translate}}\" (click)=\"selectTask()\"><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i></button>\r\n\t\t\t\t\t\t\t\t<!-- startTimer() -->\r\n\t\t\t\t\t\t\t</ng-template>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"card-body pt-3\">\r\n\t\t\t\t\t<div class=\"row\">\r\n\t\t\t\t\t\t<div class=\"col-sm-12\">\r\n\t\t\t\t\t\t\t<div class=\"row text-center\">\r\n\t\t\t\t\t\t\t\t<div class=\"col-md-6 d-flex mb-lg-0 mb-2 ml-lg-0 ml-4\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"btn calender-day\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"closeOpenMonthViewDay()\">\r\n\t\t\t\t\t\t\t\t\t\t<i class=\"calendar-icon fa fa-chevron-left\"></i>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"ml-2 mr-2\"><h3>{{ viewDate | calendarDate:(view + 'ViewTitle'): loginUser.language }}</h3></div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"btn calender-day\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"closeOpenMonthViewDay()\">\r\n\t\t\t\t\t\t\t\t\t\t<i class=\"calendar-icon fa fa-chevron-right\"></i>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"col-md-6 mb-lg-0 mb-2 text-lg-right\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"btn-view-date\">\r\n\t\t\t\t\t\t\t\t\t\t<!-- <div class=\"btn calender-today mb-1\" mwlCalendarToday [(viewDate)]=\"viewDate\">{{'calendar.today' | translate}}</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"btn calender-today mb-1\" (click)=\"setView(CalendarView.Month)\" [class.active]=\"view === CalendarView.Month\">{{'calendar.month' | translate}}</div> -->\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"btn calender-today mb-1\" (click)=\"setView(CalendarView.Week)\" [class.active]=\"view === CalendarView.Week\">{{'calendar.week' | translate}}</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"btn calender-today mb-1\" (click)=\"setView(CalendarView.Day)\" [class.active]=\"view === CalendarView.Day\">{{'calendar.day' | translate}}</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<br />\r\n\t\t\t\t\t\t\t<div [ngSwitch]=\"view\">\r\n\t\t\t\t\t\t\t\t<mwl-calendar-month-view *ngSwitchCase=\"CalendarView.Month\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" [activeDayIsOpen]=\"activeDayIsOpen\" (dayClicked)=\"dayClicked($event.day)\" [locale]=\"loginUser.language\"></mwl-calendar-month-view>\r\n\t\t\t\t\t\t\t\t<mwl-calendar-week-view *ngSwitchCase=\"CalendarView.Week\" [viewDate]=\"viewDate\" [events]=\"events\"[refresh]=\"refresh\" [locale]=\"loginUser.language\"></mwl-calendar-week-view>\r\n\t\t\t\t\t\t\t\t<mwl-calendar-day-view *ngSwitchCase=\"CalendarView.Day\" [viewDate]=\"viewDate\" [events]=\"events\"[refresh]=\"refresh\" [locale]=\"loginUser.language\"></mwl-calendar-day-view>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>");
+/* harmony default export */ __webpack_exports__["default"] = ("<section>\r\n\t<div class=\"row\">\r\n\t\t<div class=\"col-sm-12\">\r\n\t\t\t<div class=\"card pl-2 pr-2 pb-3\">\r\n\t\t\t\t<div class=\"row\">\r\n\t\t\t\t\t<div class=\"col-sm-6\">\r\n\t\t\t\t\t\t<h4 class=\"main-title pt-2 mt-2\"><span>{{'calendar.title' | translate}}</span></h4>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"col-sm-6\">\r\n\t\t\t\t\t\t<div *ngIf=\"showTimer\" style=\"margin-top: 10px;\">\r\n\t\t\t\t\t\t\t<ng-container *ngIf=\"isTimerStarted else elseBlock10\">\r\n\t\t\t\t\t\t\t\t<button class=\"btn btn-create mb-0 mb-lg-0 float-right\" tooltip=\"{{'timer_logs.title1' | translate}}\" (click)=\"stopTimer(true)\"><i class=\"fa fa-stop-circle\" aria-hidden=\"true\"></i></button>\r\n\t\t\t\t\t\t\t</ng-container>\r\n\t\t\t\t\t\t\t<ng-template #elseBlock10>\r\n\t\t\t\t\t\t\t\t<button class=\"btn btn-create mb-0 mb-lg-0 float-right\" tooltip=\"{{'timer_logs.title' | translate}}\" (click)=\"selectTask()\"><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i></button>\r\n\t\t\t\t\t\t\t\t<!-- startTimer() -->\r\n\t\t\t\t\t\t\t</ng-template>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"card-body pt-3\">\r\n\t\t\t\t\t<div class=\"row\">\r\n\t\t\t\t\t\t<div class=\"col-sm-12\">\r\n\t\t\t\t\t\t\t<div class=\"row text-center\">\r\n\t\t\t\t\t\t\t\t<div class=\"col-md-6 d-flex mb-lg-0 mb-2 ml-lg-0 ml-4\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"btn calender-day\" mwlCalendarPreviousView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"closeOpenMonthViewDay()\">\r\n\t\t\t\t\t\t\t\t\t\t<i class=\"calendar-icon fa fa-chevron-left\"></i>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"ml-2 mr-2\"><h3>{{ viewDate | calendarDate:(view + 'ViewTitle'): loginUser.language }}</h3></div>\r\n\t\t\t\t\t\t\t\t\t<div class=\"btn calender-day\" mwlCalendarNextView [view]=\"view\" [(viewDate)]=\"viewDate\" (viewDateChange)=\"closeOpenMonthViewDay()\">\r\n\t\t\t\t\t\t\t\t\t\t<i class=\"calendar-icon fa fa-chevron-right\"></i>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t<div class=\"col-md-6 mb-lg-0 mb-2 text-lg-right\">\r\n\t\t\t\t\t\t\t\t\t<div class=\"btn-view-date\">\r\n\t\t\t\t\t\t\t\t\t\t<!-- <div class=\"btn calender-today mb-1\" mwlCalendarToday [(viewDate)]=\"viewDate\">{{'calendar.today' | translate}}</div> -->\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"btn calender-today mb-1\" (click)=\"setView(CalendarView.Month)\" [class.active]=\"view === CalendarView.Month\">{{'calendar.month' | translate}}</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"btn calender-today mb-1\" (click)=\"setView(CalendarView.Week)\" [class.active]=\"view === CalendarView.Week\">{{'calendar.week' | translate}}</div>\r\n\t\t\t\t\t\t\t\t\t\t<div class=\"btn calender-today mb-1\" (click)=\"setView(CalendarView.Day)\" [class.active]=\"view === CalendarView.Day\">{{'calendar.day' | translate}}</div>\r\n\t\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t<br />\r\n\t\t\t\t\t\t\t<div [ngSwitch]=\"view\">\r\n\t\t\t\t\t\t\t\t<mwl-calendar-month-view *ngSwitchCase=\"CalendarView.Month\" [viewDate]=\"viewDate\" [events]=\"events\" [refresh]=\"refresh\" [activeDayIsOpen]=\"activeDayIsOpen\" (dayClicked)=\"dayClicked($event.day)\" [locale]=\"loginUser.language\"></mwl-calendar-month-view>\r\n\t\t\t\t\t\t\t\t<mwl-calendar-week-view *ngSwitchCase=\"CalendarView.Week\" [viewDate]=\"viewDate\" [events]=\"events\"[refresh]=\"refresh\" [locale]=\"loginUser.language\"></mwl-calendar-week-view>\r\n\t\t\t\t\t\t\t\t<mwl-calendar-day-view *ngSwitchCase=\"CalendarView.Day\" [viewDate]=\"viewDate\" [events]=\"events\"[refresh]=\"refresh\" [locale]=\"loginUser.language\"></mwl-calendar-day-view>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</section>\r\n");
 
 /***/ }),
 
@@ -403,7 +403,7 @@ var CalendarListComponent = /** @class */ (function () {
         this.isCalendarLoaded = false;
         this.showTimer = false;
         this.isTimerStarted = false;
-        this.view = angular_calendar__WEBPACK_IMPORTED_MODULE_2__["CalendarView"].Day;
+        this.view = angular_calendar__WEBPACK_IMPORTED_MODULE_2__["CalendarView"].Month;
         this.CalendarView = angular_calendar__WEBPACK_IMPORTED_MODULE_2__["CalendarView"];
         this.viewDate = new Date();
         this.refresh = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Subject"]();
@@ -412,14 +412,13 @@ var CalendarListComponent = /** @class */ (function () {
         this.authenticationService.loginUser.subscribe(function (x) { return _this.loginUser = x; });
     }
     CalendarListComponent.prototype.ngOnInit = function () {
-        var _this = this;
         this.getTasks();
-        this.getTimeLogs();
-        this.timerInterval1 = setInterval(function () {
-            if (_this.loginUser) {
-                _this.getTimeLogs(false);
-            }
-        }, 5000);
+        // this.getTimeLogs();
+        // this.timerInterval1 = setInterval(() => {
+        // 	if(this.loginUser) {
+        // 		this.getTimeLogs(false);
+        // 	}
+        // }, 5000);
     };
     CalendarListComponent.prototype.dayClicked = function (_a) {
         var date = _a.date, events = _a.events;
@@ -452,7 +451,8 @@ var CalendarListComponent = /** @class */ (function () {
         var _this = this;
         this.taskService.getCalendarTasks().subscribe(function (data) {
             _this.tasks = data;
-            _this.getDefects();
+            _this.setCalendarData();
+            // this.getDefects();
         });
     };
     CalendarListComponent.prototype.getDefects = function () {
@@ -486,54 +486,53 @@ var CalendarListComponent = /** @class */ (function () {
         });
     };
     CalendarListComponent.prototype.setCalendarData = function () {
-        var _this = this;
         var eventsAll = [];
         this.tasks.forEach(function (element) {
             eventsAll.push({
-                start: Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["subDays"])(Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["startOfDay"])(new Date(element.task_start_date)), 0),
-                end: Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["addDays"])(new Date(element.task_end_date), 0),
-                title: element.generated_id + " - " + element.name,
+                start: Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["subDays"])((new Date(element.start_time)), 0),
+                end: Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["addDays"])(new Date(element.end_time), 0),
+                title: element.user_name + '<br>' + element.title + '<br>- ' + element.start_time + ' - ' + element.end_time,
                 color: _core_helpers_pm_helper__WEBPACK_IMPORTED_MODULE_16__["colors"].blue,
-                allDay: true
+                allDay: false
             });
         });
-        this.defects.forEach(function (element) {
-            eventsAll.push({
-                start: Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["subDays"])(Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["startOfDay"])(new Date(element.start_date)), 0),
-                end: Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["addDays"])(new Date(element.end_date), 0),
-                title: element.generated_id + " - " + element.defect_name,
-                color: _core_helpers_pm_helper__WEBPACK_IMPORTED_MODULE_16__["colors"].orange,
-                allDay: true
-            });
-        });
-        this.incidents.forEach(function (element) {
-            eventsAll.push({
-                start: Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["subDays"])(Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["startOfDay"])(new Date(element.start_date)), 0),
-                end: Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["addDays"])(new Date(element.end_date), 0),
-                title: element.generated_id + " - " + element.incident_name,
-                color: _core_helpers_pm_helper__WEBPACK_IMPORTED_MODULE_16__["colors"].purple,
-                allDay: true
-            });
-        });
-        this.meetings.forEach(function (element) {
-            eventsAll.push({
-                start: Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["subDays"])(Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["startOfDay"])(new Date(element.start_date)), 0),
-                end: Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["addDays"])(new Date(element.end_date), 0),
-                title: element.generated_id + " - " + element.title,
-                color: _core_helpers_pm_helper__WEBPACK_IMPORTED_MODULE_16__["colors"].yellow,
-                allDay: true
-            });
-        });
-        this.holidays.forEach(function (element) {
-            eventsAll.push({
-                start: Object(date_fns__WEBPACK_IMPORTED_MODULE_3__["startOfDay"])(new Date(element.date)),
-                title: _this.translate.instant('holidays.title') + " - " + element.event_name,
-                color: {
-                    primary: element.color,
-                    secondary: element.color
-                }
-            });
-        });
+        // this.defects.forEach(element => {
+        // 	eventsAll.push({
+        // 		start: subDays(startOfDay(new Date(element.start_date)), 0),
+        // 		end: addDays(new Date(element.end_date), 0),
+        // 		title: element.generated_id + " - " + element.defect_name,
+        // 		color: colors.orange,
+        // 		allDay: true
+        // 	});
+        // });
+        // this.incidents.forEach(element => {
+        // 	eventsAll.push({
+        // 		start: subDays(startOfDay(new Date(element.start_date)), 0),
+        // 		end: addDays(new Date(element.end_date), 0),
+        // 		title: element.generated_id + " - " + element.incident_name,
+        // 		color: colors.purple,
+        // 		allDay: true
+        // 	});
+        // });
+        // this.meetings.forEach(element => {
+        // 	eventsAll.push({
+        // 		start: subDays(startOfDay(new Date(element.start_date)), 0),
+        // 		end: addDays(new Date(element.end_date), 0),
+        // 		title: element.generated_id + " - " + element.title,
+        // 		color: colors.yellow,
+        // 		allDay: true
+        // 	});
+        // });
+        // this.holidays.forEach(element => {
+        // 	eventsAll.push({
+        // 		start: startOfDay(new Date(element.date)),
+        // 		title: this.translate.instant('holidays.title') + " - " + element.event_name,
+        // 		color: {
+        // 			primary: element.color,
+        // 			secondary: element.color
+        // 		}
+        // 	});
+        // });
         this.addEvent(eventsAll);
         this.AllCalendarEvents = eventsAll;
     };
@@ -630,7 +629,7 @@ var CalendarListComponent = /** @class */ (function () {
         var diffHrs = Math.floor((dateDiff % 86400000) / 3600000); // hours
         var diffMins = Math.round(((dateDiff % 86400000) % 3600000) / 60000);
         // --
-        // Check 
+        // Check
         if (diffMins < 1) {
             this.toastr.error(this.translate.instant('timer_logs.error_messages.message2'), this.translate.instant('timesheet.title'));
             isSaved = false;

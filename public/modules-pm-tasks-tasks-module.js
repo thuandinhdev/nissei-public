@@ -1069,16 +1069,15 @@ var TaskDetailsComponent = /** @class */ (function () {
         this.taskPriorityKeyValue = _core_helpers_pm_helper__WEBPACK_IMPORTED_MODULE_8__["task_priority_key_value"];
     }
     TaskDetailsComponent.prototype.ngOnInit = function () {
-        var _this = this;
         this.totalHours = "00";
         this.totalMinutes = "00";
         this.totalSeconds = "00";
-        this.getTimeLogs();
-        this.timerInterval1 = setInterval(function () {
-            if (_this.loginUser) {
-                _this.getTimeLogs(false);
-            }
-        }, 5000);
+        // this.getTimeLogs();
+        // this.timerInterval1 = setInterval(() => {
+        // 	if(this.loginUser) {
+        // 		this.getTimeLogs(false);
+        // 	}
+        // }, 5000);
     };
     TaskDetailsComponent.prototype.getTaskById = function (taskId) {
         var _this = this;
@@ -1239,7 +1238,7 @@ var TaskDetailsComponent = /** @class */ (function () {
         var diffHrs = Math.floor((dateDiff % 86400000) / 3600000); // hours
         var diffMins = Math.round(((dateDiff % 86400000) % 3600000) / 60000);
         // --
-        // Check 
+        // Check
         if (diffMins < 1) {
             this.toastr.error(this.translate.instant('timer_logs.error_messages.message2'), this.translate.instant('timesheet.title'));
             isSaved = false;
