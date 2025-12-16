@@ -1371,21 +1371,32 @@ class TaskRepository
     public function getTasksForCalendar()
     {
         $user = Auth::user();
-        return Task::with(
-            [
-            'assignUser' => function ($query) {
-                $query->select('id', 'firstname', 'lastname', 'avatar');
-            },
-            ]
-        )
-            ->where(
-                function ($query) use ($user) {
-                    $query->where('assign_to', $user->id)->orWhere('created_by', $user->id);
-                }
+        return Timesheet::join('eblo_projects', 'eblo_projects.id', '=', 'eblo_timesheets.project_id')
+        ->join('eblo_users', 'eblo_users.id', '=', 'eblo_timesheets.created_user_id')
+            ->select(
+                'eblo_timesheets.id',
+                DB::raw("CONCAT(eblo_users.firstname,' ',eblo_users.lastname) as user_name"),
+                DB::raw("DATE_FORMAT(eblo_timesheets.start_time, '%Y-%m-%d %H:%i') as start_time"),
+                DB::raw("DATE_FORMAT(eblo_timesheets.end_time, '%Y-%m-%d %H:%i') as end_time"),
+                DB::raw("CONCAT('- ',eblo_projects.project_name,'<br>- ',eblo_timesheets.note) as title")
             )
-            ->whereNotIn('status', [5, 6])
-            ->orderBy('created_at', 'DESC')
-            ->get();
+            ->orderBy('eblo_timesheets.start_time', 'ASC')
+             ->get();
+        // return Task::with(
+        //     [
+        //     'assignUser' => function ($query) {
+        //         $query->select('id', 'firstname', 'lastname', 'avatar');
+        //     },
+        //     ]
+        // )
+        //     ->where(
+        //         function ($query) use ($user) {
+        //             $query->where('assign_to', $user->id)->orWhere('created_by', $user->id);
+        //         }
+        //     )
+        //     ->whereNotIn('status', [5, 6])
+        //     ->orderBy('created_at', 'DESC')
+        //     ->get();
     }
 
     /**

@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header\">\r\n\t<h2 class=\"modal-title font-weight-normal\"><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i>&nbsp;{{'timesheet.create.title1' | translate}}</h2>\r\n\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\"><span aria-hidden=\"true\">&times;</span></button>\r\n</div>\r\n<form class=\"form\" [formGroup]=\"createTimesheetForm\" (ngSubmit)=\"onSubmit()\">\r\n\t<div class=\"modal-body\">\r\n\t\t<div class=\"form-body\">\r\n\t\t\t<div class=\"row\">\r\n\t\t\t\t<div class=\"col-md-6\">\r\n\t\t\t\t\t<div class=\"form-group\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.start_time.errors }\">\r\n\t\t\t\t\t\t<label for=\"start_time\">{{'timesheet.create.fields.start_time' | translate}}<span class=\"text-danger\">&nbsp;*</span></label>\r\n\t\t\t\t\t\t<div class=\"position-relative has-icon-left\">\r\n\t\t\t\t\t\t\t<owl-date-time #startDT></owl-date-time>\r\n\t\t\t\t\t\t\t<input class=\"form-control\" [owlDateTimeTrigger]=\"startDT\" [owlDateTime]=\"startDT\" formControlName=\"start_time\" id=\"start_time\" placeholder=\"{{'timesheet.create.placeholders.placeholder1' | translate}}\" aria-describedby=\"inputGroupPrepend1\" (dateTimeChange)=\"startTimeChange($event)\" />\r\n\t\t\t\t\t\t\t<div class=\"form-control-position\"><i class=\"ft-calendar\"></i></div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div *ngIf=\"isFormSubmitted && timesheetControl.start_time.errors\" class=\"invalid-feedback\">\r\n\t\t\t\t\t\t\t<div *ngIf=\"timesheetControl.start_time.errors.required\">{{'timesheet.create.error_messages.message1' | translate}}</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-md-6\">\r\n\t\t\t\t\t<div class=\"form-group\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.end_time.errors }\">\r\n\t\t\t\t\t\t<label for=\"end_time\">{{'timesheet.create.fields.end_time' | translate}}<span class=\"text-danger\">&nbsp;*</span></label>\r\n\t\t\t\t\t\t<div class=\"position-relative has-icon-left\">\r\n\t\t\t\t\t\t\t<owl-date-time #endDT></owl-date-time>\r\n\t\t\t\t\t\t\t<input class=\"form-control\" [owlDateTimeTrigger]=\"endDT\" [owlDateTime]=\"endDT\" [min]=\"createTimesheetForm.get('start_time').value\" formControlName=\"end_time\" id=\"end_time\" placeholder=\"{{'timesheet.create.placeholders.placeholder2' | translate}}\" aria-describedby=\"inputGroupPrepend2\" />\r\n\t\t\t\t\t\t\t<div class=\"form-control-position\"><i class=\"ft-calendar\"></i></div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div *ngIf=\"isFormSubmitted && timesheetControl.end_time.errors\" class=\"invalid-feedback\">\r\n\t\t\t\t\t\t\t<div *ngIf=\"timesheetControl.end_time.errors.required\">{{'timesheet.create.error_messages.message2' | translate}}</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-md-12\">\r\n\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t<label for=\"note\">{{'timesheet.create.fields.note' | translate}}</label>\r\n\t\t\t\t\t\t<textarea class=\"form-control\" formControlName=\"note\" id=\"note\" placeholder=\"{{'timesheet.create.placeholders.placeholder3' | translate}}\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.note.errors }\"></textarea>\r\n\t\t\t\t\t\t<div *ngIf=\"isFormSubmitted && timesheetControl.note.errors\" class=\"invalid-feedback\">\r\n\t\t\t\t\t\t\t<div *ngIf=\"timesheetControl.note.errors.required\">{{'timesheet.create.error_messages.message4' | translate}}</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"modal-footer\">\r\n\t\t<button type=\"button\" class=\"btn btn-cancel mb-0\" (click)=\"onCancel()\">{{'common.close' | translate}}</button>\r\n\t\t<button type=\"submit\" class=\"btn btn-submit mb-0\">{{'common.create' | translate}}</button>\r\n\t</div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header\">\r\n\t<h2 class=\"modal-title font-weight-normal\"><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i>&nbsp;{{'timesheet.create.title1' | translate}}</h2>\r\n\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\"><span aria-hidden=\"true\">&times;</span></button>\r\n</div>\r\n<form class=\"form\" [formGroup]=\"createTimesheetForm\" (ngSubmit)=\"onSubmit()\">\r\n\t<div class=\"modal-body\">\r\n\t\t<div class=\"form-body\">\r\n\t\t\t<div class=\"row\">\r\n\r\n                <div class=\"col-md-12\">\r\n\t\t\t\t\t<div class=\"form-group\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.project_id.errors }\">\r\n                        <label for=\"project_id\">{{'tasks.create.fields.project_name' | translate }}&nbsp;<span class=\"text-danger\">*</span></label>\r\n                        <ng-select [searchable]=\"true\"\r\n                            [items]=\"projects\"\r\n                            [selectOnTab]=\"true\"\r\n                            bindLabel=\"project_name\"\r\n                            bindValue=\"id\"\r\n                            labelForId=\"project_id\"\r\n                            formControlName=\"project_id\"\r\n                            placeholder=\"{{'tasks.create.placeholders.placeholder6' | translate }}\">\r\n                            <ng-template ng-option-tmp let-item=\"item\">{{item.project_name}}</ng-template>\r\n                        </ng-select>\r\n                        <div *ngIf=\"isFormSubmitted && timesheetControl.project_id.errors\" class=\"invalid-feedback\">\r\n                            <div *ngIf=\"timesheetControl.project_id.errors.required\">{{'tasks.create.error_messages.message8' | translate }}</div>\r\n                        </div>\r\n                    </div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-md-6\">\r\n\t\t\t\t\t<div class=\"form-group\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.start_time.errors }\">\r\n\t\t\t\t\t\t<label for=\"start_time\">{{'timesheet.create.fields.start_time' | translate}}<span class=\"text-danger\">&nbsp;*</span></label>\r\n\t\t\t\t\t\t<div class=\"position-relative has-icon-left\">\r\n\t\t\t\t\t\t\t<owl-date-time #startDT></owl-date-time>\r\n\t\t\t\t\t\t\t<input class=\"form-control\" [owlDateTimeTrigger]=\"startDT\" [owlDateTime]=\"startDT\" formControlName=\"start_time\" id=\"start_time\" placeholder=\"{{'timesheet.create.placeholders.placeholder1' | translate}}\" aria-describedby=\"inputGroupPrepend1\" (dateTimeChange)=\"startTimeChange($event)\" />\r\n\t\t\t\t\t\t\t<div class=\"form-control-position\"><i class=\"ft-calendar\"></i></div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div *ngIf=\"isFormSubmitted && timesheetControl.start_time.errors\" class=\"invalid-feedback\">\r\n\t\t\t\t\t\t\t<div *ngIf=\"timesheetControl.start_time.errors.required\">{{'timesheet.create.error_messages.message1' | translate}}</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-md-6\">\r\n\t\t\t\t\t<div class=\"form-group\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.end_time.errors }\">\r\n\t\t\t\t\t\t<label for=\"end_time\">{{'timesheet.create.fields.end_time' | translate}}<span class=\"text-danger\">&nbsp;*</span></label>\r\n\t\t\t\t\t\t<div class=\"position-relative has-icon-left\">\r\n\t\t\t\t\t\t\t<owl-date-time #endDT></owl-date-time>\r\n\t\t\t\t\t\t\t<input class=\"form-control\" [owlDateTimeTrigger]=\"endDT\" [owlDateTime]=\"endDT\" [min]=\"createTimesheetForm.get('start_time').value\" formControlName=\"end_time\" id=\"end_time\" placeholder=\"{{'timesheet.create.placeholders.placeholder2' | translate}}\" aria-describedby=\"inputGroupPrepend2\" />\r\n\t\t\t\t\t\t\t<div class=\"form-control-position\"><i class=\"ft-calendar\"></i></div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div *ngIf=\"isFormSubmitted && timesheetControl.end_time.errors\" class=\"invalid-feedback\">\r\n\t\t\t\t\t\t\t<div *ngIf=\"timesheetControl.end_time.errors.required\">{{'timesheet.create.error_messages.message2' | translate}}</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-md-12\">\r\n\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t<label for=\"note\">{{'timesheet.create.fields.note' | translate}}</label>\r\n\t\t\t\t\t\t<textarea class=\"form-control\" formControlName=\"note\" id=\"note\" placeholder=\"{{'timesheet.create.placeholders.placeholder3' | translate}}\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.note.errors }\"></textarea>\r\n\t\t\t\t\t\t<div *ngIf=\"isFormSubmitted && timesheetControl.note.errors\" class=\"invalid-feedback\">\r\n\t\t\t\t\t\t\t<div *ngIf=\"timesheetControl.note.errors.required\">{{'timesheet.create.error_messages.message4' | translate}}</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"modal-footer\">\r\n\t\t<button type=\"button\" class=\"btn btn-cancel mb-0\" (click)=\"onCancel()\">{{'common.close' | translate}}</button>\r\n\t\t<button type=\"submit\" class=\"btn btn-submit mb-0\">{{'common.create' | translate}}</button>\r\n\t</div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header\">\r\n\t<h2 class=\"modal-title font-weight-normal\"><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i>&nbsp;{{'timesheet.create.title2' | translate}}</h2>\r\n\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"bsEditRoleModalRef.hide()\"><span aria-hidden=\"true\">&times;</span></button>\r\n</div>\r\n<form class=\"form\" [formGroup]=\"editTimesheetForm\" (ngSubmit)=\"onSubmit()\">\r\n\t<div class=\"modal-body\">\r\n\t\t<div class=\"form-body\">\r\n\t\t\t<div class=\"row\">\r\n\t\t\t\t<div class=\"col-md-6\">\r\n\t\t\t\t\t<div class=\"form-group\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.start_time.errors }\">\r\n\t\t\t\t\t\t<label for=\"start_time\">{{'timesheet.create.fields.start_time' | translate}}<span class=\"text-danger\">&nbsp;*</span></label>\r\n\t\t\t\t\t\t<div class=\"position-relative has-icon-left\">\r\n\t\t\t\t\t\t\t<owl-date-time #startDT></owl-date-time>\r\n\t\t\t\t\t\t\t<input class=\"form-control\" [owlDateTimeTrigger]=\"startDT\" [owlDateTime]=\"startDT\" formControlName=\"start_time\" id=\"start_time\" placeholder=\"{{'timesheet.create.placeholders.placeholder1' | translate}}\" aria-describedby=\"inputGroupPrepend1\" (dateTimeChange)=\"startTimeChange($event)\" />\r\n\t\t\t\t\t\t\t<div class=\"form-control-position\"><i class=\"ft-calendar\"></i></div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div *ngIf=\"isFormSubmitted && timesheetControl.start_time.errors\" class=\"invalid-feedback\">\r\n\t\t\t\t\t\t\t<div *ngIf=\"timesheetControl.start_time.errors.required\">{{'timesheet.create.error_messages.message1' | translate}}</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-md-6\">\r\n\t\t\t\t\t<div class=\"form-group\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.end_time.errors }\">\r\n\t\t\t\t\t\t<label for=\"end_time\">{{'timesheet.create.fields.end_time' | translate}}<span class=\"text-danger\">&nbsp;*</span></label>\r\n\t\t\t\t\t\t<div class=\"position-relative has-icon-left\">\r\n\t\t\t\t\t\t\t<owl-date-time #endDT></owl-date-time>\r\n\t\t\t\t\t\t\t<input class=\"form-control\" [owlDateTimeTrigger]=\"endDT\" [owlDateTime]=\"endDT\" [min]=\"editTimesheetForm.get('start_time').value\" formControlName=\"end_time\" id=\"end_time\" placeholder=\"{{'timesheet.create.placeholders.placeholder2' | translate}}\" aria-describedby=\"inputGroupPrepend2\" />\r\n\t\t\t\t\t\t\t<div class=\"form-control-position\"><i class=\"ft-calendar\"></i></div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div *ngIf=\"isFormSubmitted && timesheetControl.end_time.errors\" class=\"invalid-feedback\">\r\n\t\t\t\t\t\t\t<div *ngIf=\"timesheetControl.end_time.errors.required\">{{'timesheet.create.error_messages.message2' | translate}}</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-md-12\">\r\n\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t<label for=\"note\">{{'timesheet.create.fields.note' | translate}}</label>\r\n\t\t\t\t\t\t<textarea class=\"form-control\" formControlName=\"note\" id=\"note\" placeholder=\"{{'timesheet.create.placeholders.placeholder3' | translate}}\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.note.errors }\"></textarea>\r\n\t\t\t\t\t\t<div *ngIf=\"isFormSubmitted && timesheetControl.note.errors\" class=\"invalid-feedback\">\r\n\t\t\t\t\t\t\t<div *ngIf=\"timesheetControl.note.errors.required\">{{'timesheet.create.error_messages.message4' | translate}}</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"modal-footer\">\r\n\t\t<button type=\"button\" class=\"btn btn-cancel mb-0\" (click)=\"onCancel()\">{{'common.close' | translate}}</button>\r\n\t\t<button type=\"submit\" class=\"btn btn-submit mb-0\">{{'common.update' | translate}}</button>\r\n\t</div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header\">\r\n\t<h2 class=\"modal-title font-weight-normal\"><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i>&nbsp;{{'timesheet.create.title2' | translate}}</h2>\r\n\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"bsEditRoleModalRef.hide()\"><span aria-hidden=\"true\">&times;</span></button>\r\n</div>\r\n<form class=\"form\" [formGroup]=\"editTimesheetForm\" (ngSubmit)=\"onSubmit()\">\r\n\t<div class=\"modal-body\">\r\n\t\t<div class=\"form-body\">\r\n\t\t\t<div class=\"row\">\r\n                <div class=\"col-md-12\">\r\n\t\t\t\t\t<div class=\"form-group\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.project_id.errors }\">\r\n                        <label for=\"project_id\">{{'tasks.create.fields.project_name' | translate }}&nbsp;<span class=\"text-danger\">*</span></label>\r\n                        <ng-select [searchable]=\"true\"\r\n                            [items]=\"projects\"\r\n                            [selectOnTab]=\"true\"\r\n                            bindLabel=\"project_name\"\r\n                            bindValue=\"id\"\r\n                            labelForId=\"project_id\"\r\n                            formControlName=\"project_id\"\r\n                            placeholder=\"{{'tasks.create.placeholders.placeholder6' | translate }}\">\r\n                            <ng-template ng-option-tmp let-item=\"item\">{{item.project_name}}</ng-template>\r\n                        </ng-select>\r\n                        <div *ngIf=\"isFormSubmitted && timesheetControl.project_id.errors\" class=\"invalid-feedback\">\r\n                            <div *ngIf=\"timesheetControl.project_id.errors.required\">{{'tasks.create.error_messages.message8' | translate }}</div>\r\n                        </div>\r\n                    </div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-md-6\">\r\n\t\t\t\t\t<div class=\"form-group\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.start_time.errors }\">\r\n\t\t\t\t\t\t<label for=\"start_time\">{{'timesheet.create.fields.start_time' | translate}}<span class=\"text-danger\">&nbsp;*</span></label>\r\n\t\t\t\t\t\t<div class=\"position-relative has-icon-left\">\r\n\t\t\t\t\t\t\t<owl-date-time #startDT></owl-date-time>\r\n\t\t\t\t\t\t\t<input class=\"form-control\" [owlDateTimeTrigger]=\"startDT\" [owlDateTime]=\"startDT\" formControlName=\"start_time\" id=\"start_time\" placeholder=\"{{'timesheet.create.placeholders.placeholder1' | translate}}\" aria-describedby=\"inputGroupPrepend1\" (dateTimeChange)=\"startTimeChange($event)\" />\r\n\t\t\t\t\t\t\t<div class=\"form-control-position\"><i class=\"ft-calendar\"></i></div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div *ngIf=\"isFormSubmitted && timesheetControl.start_time.errors\" class=\"invalid-feedback\">\r\n\t\t\t\t\t\t\t<div *ngIf=\"timesheetControl.start_time.errors.required\">{{'timesheet.create.error_messages.message1' | translate}}</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-md-6\">\r\n\t\t\t\t\t<div class=\"form-group\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.end_time.errors }\">\r\n\t\t\t\t\t\t<label for=\"end_time\">{{'timesheet.create.fields.end_time' | translate}}<span class=\"text-danger\">&nbsp;*</span></label>\r\n\t\t\t\t\t\t<div class=\"position-relative has-icon-left\">\r\n\t\t\t\t\t\t\t<owl-date-time #endDT></owl-date-time>\r\n\t\t\t\t\t\t\t<input class=\"form-control\" [owlDateTimeTrigger]=\"endDT\" [owlDateTime]=\"endDT\" [min]=\"editTimesheetForm.get('start_time').value\" formControlName=\"end_time\" id=\"end_time\" placeholder=\"{{'timesheet.create.placeholders.placeholder2' | translate}}\" aria-describedby=\"inputGroupPrepend2\" />\r\n\t\t\t\t\t\t\t<div class=\"form-control-position\"><i class=\"ft-calendar\"></i></div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div *ngIf=\"isFormSubmitted && timesheetControl.end_time.errors\" class=\"invalid-feedback\">\r\n\t\t\t\t\t\t\t<div *ngIf=\"timesheetControl.end_time.errors.required\">{{'timesheet.create.error_messages.message2' | translate}}</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-md-12\">\r\n\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t<label for=\"note\">{{'timesheet.create.fields.note' | translate}}</label>\r\n\t\t\t\t\t\t<textarea class=\"form-control\" formControlName=\"note\" id=\"note\" placeholder=\"{{'timesheet.create.placeholders.placeholder3' | translate}}\" [ngClass]=\"{ 'is-invalid': isFormSubmitted && timesheetControl.note.errors }\"></textarea>\r\n\t\t\t\t\t\t<div *ngIf=\"isFormSubmitted && timesheetControl.note.errors\" class=\"invalid-feedback\">\r\n\t\t\t\t\t\t\t<div *ngIf=\"timesheetControl.note.errors.required\">{{'timesheet.create.error_messages.message4' | translate}}</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"modal-footer\">\r\n\t\t<button type=\"button\" class=\"btn btn-cancel mb-0\" (click)=\"onCancel()\">{{'common.close' | translate}}</button>\r\n\t\t<button type=\"submit\" class=\"btn btn-submit mb-0\">{{'common.update' | translate}}</button>\r\n\t</div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -292,7 +292,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _core_services_timesheet_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../core/services/timesheet.service */ "./src/app/core/services/timesheet.service.ts");
+/* harmony import */ var _core_services_project_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../core/services/project.service */ "./src/app/core/services/project.service.ts");
+/* harmony import */ var _core_services_timesheet_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../core/services/timesheet.service */ "./src/app/core/services/timesheet.service.ts");
+
 
 
 
@@ -303,9 +305,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var CreateTimesheetModalComponent = /** @class */ (function () {
-    function CreateTimesheetModalComponent(translate, bsModalRef, formBuilder, toastr, timesheetService) {
+    function CreateTimesheetModalComponent(translate, bsModalRef, projectService, formBuilder, toastr, timesheetService) {
         this.translate = translate;
         this.bsModalRef = bsModalRef;
+        this.projectService = projectService;
         this.formBuilder = formBuilder;
         this.toastr = toastr;
         this.timesheetService = timesheetService;
@@ -314,11 +317,20 @@ var CreateTimesheetModalComponent = /** @class */ (function () {
     }
     CreateTimesheetModalComponent.prototype.ngOnInit = function () {
         this.onClose = new rxjs__WEBPACK_IMPORTED_MODULE_6__["Subject"]();
+        this.getProjects();
         this.loadForms();
+    };
+    CreateTimesheetModalComponent.prototype.getProjects = function () {
+        var _this = this;
+        this.projectService.getProject()
+            .subscribe(function (data) {
+            _this.projects = data;
+            // this.loadForms();
+        });
     };
     CreateTimesheetModalComponent.prototype.loadForms = function () {
         this.createTimesheetForm = this.formBuilder.group({
-            project_id: [this.params.project_id],
+            project_id: [this.params.project_id, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             module_id: [this.params.module_id, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             module_related_id: [this.params.module_related_id],
             start_time: [new Date(), _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
@@ -363,9 +375,10 @@ var CreateTimesheetModalComponent = /** @class */ (function () {
     CreateTimesheetModalComponent.ctorParameters = function () { return [
         { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateService"] },
         { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__["BsModalRef"] },
+        { type: _core_services_project_service__WEBPACK_IMPORTED_MODULE_8__["ProjectService"] },
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
         { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] },
-        { type: _core_services_timesheet_service__WEBPACK_IMPORTED_MODULE_8__["TimesheetService"] }
+        { type: _core_services_timesheet_service__WEBPACK_IMPORTED_MODULE_9__["TimesheetService"] }
     ]; };
     CreateTimesheetModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -375,9 +388,10 @@ var CreateTimesheetModalComponent = /** @class */ (function () {
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateService"],
             ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__["BsModalRef"],
+            _core_services_project_service__WEBPACK_IMPORTED_MODULE_8__["ProjectService"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
             ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"],
-            _core_services_timesheet_service__WEBPACK_IMPORTED_MODULE_8__["TimesheetService"]])
+            _core_services_timesheet_service__WEBPACK_IMPORTED_MODULE_9__["TimesheetService"]])
     ], CreateTimesheetModalComponent);
     return CreateTimesheetModalComponent;
 }());
@@ -418,7 +432,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _core_services_timesheet_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../core/services/timesheet.service */ "./src/app/core/services/timesheet.service.ts");
+/* harmony import */ var _core_services_project_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../core/services/project.service */ "./src/app/core/services/project.service.ts");
+/* harmony import */ var _core_services_timesheet_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../core/services/timesheet.service */ "./src/app/core/services/timesheet.service.ts");
+
 
 
 
@@ -429,10 +445,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var EditTimesheetModalComponent = /** @class */ (function () {
-    function EditTimesheetModalComponent(translate, bsEditRoleModalRef, formBuilder, toastr, timesheetService) {
+    function EditTimesheetModalComponent(translate, bsEditRoleModalRef, formBuilder, projectService, toastr, timesheetService) {
         this.translate = translate;
         this.bsEditRoleModalRef = bsEditRoleModalRef;
         this.formBuilder = formBuilder;
+        this.projectService = projectService;
         this.toastr = toastr;
         this.timesheetService = timesheetService;
         this.event = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
@@ -440,11 +457,21 @@ var EditTimesheetModalComponent = /** @class */ (function () {
     }
     EditTimesheetModalComponent.prototype.ngOnInit = function () {
         this.onClose = new rxjs__WEBPACK_IMPORTED_MODULE_6__["Subject"]();
+        this.getProjects();
         this.loadForm();
+    };
+    EditTimesheetModalComponent.prototype.getProjects = function () {
+        var _this = this;
+        this.projectService.getProject()
+            .subscribe(function (data) {
+            _this.projects = data;
+            // this.loadForms();
+        });
     };
     EditTimesheetModalComponent.prototype.loadForm = function () {
         this.editTimesheetForm = this.formBuilder.group({
             id: [this.timesheet.id],
+            project_id: [this.timesheet.project_id, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             start_time: [new Date(this.timesheet.start_time), _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             end_time: [new Date(this.timesheet.end_time), _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             note: [this.timesheet.note],
@@ -488,8 +515,9 @@ var EditTimesheetModalComponent = /** @class */ (function () {
         { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateService"] },
         { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__["BsModalRef"] },
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+        { type: _core_services_project_service__WEBPACK_IMPORTED_MODULE_8__["ProjectService"] },
         { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] },
-        { type: _core_services_timesheet_service__WEBPACK_IMPORTED_MODULE_8__["TimesheetService"] }
+        { type: _core_services_timesheet_service__WEBPACK_IMPORTED_MODULE_9__["TimesheetService"] }
     ]; };
     EditTimesheetModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -500,8 +528,9 @@ var EditTimesheetModalComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateService"],
             ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__["BsModalRef"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
+            _core_services_project_service__WEBPACK_IMPORTED_MODULE_8__["ProjectService"],
             ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"],
-            _core_services_timesheet_service__WEBPACK_IMPORTED_MODULE_8__["TimesheetService"]])
+            _core_services_timesheet_service__WEBPACK_IMPORTED_MODULE_9__["TimesheetService"]])
     ], EditTimesheetModalComponent);
     return EditTimesheetModalComponent;
 }());

@@ -1083,16 +1083,15 @@ var IncidentDetailsComponent = /** @class */ (function () {
         this.activeIncidentTab = '1';
     }
     IncidentDetailsComponent.prototype.ngOnInit = function () {
-        var _this = this;
         this.totalHours = "00";
         this.totalMinutes = "00";
         this.totalSeconds = "00";
         this.getIncidentById(this.incident.id);
-        this.timerInterval1 = setInterval(function () {
-            if (_this.loginUser) {
-                _this.getTimeLogs(false);
-            }
-        }, 5000);
+        // this.timerInterval1 = setInterval(() => {
+        // 	if(this.loginUser) {
+        // 		this.getTimeLogs(false);
+        // 	}
+        // }, 5000);
     };
     IncidentDetailsComponent.prototype.setActiveIncidentTab = function ($event) {
         this.isIncidentTab = $event.id;
@@ -1227,7 +1226,7 @@ var IncidentDetailsComponent = /** @class */ (function () {
         var diffHrs = Math.floor((dateDiff % 86400000) / 3600000); // hours
         var diffMins = Math.round(((dateDiff % 86400000) % 3600000) / 60000);
         // --
-        // Check 
+        // Check
         if (diffMins < 1) {
             this.toastr.error(this.translate.instant('timer_logs.error_messages.message2'), this.translate.instant('timesheet.title'));
             isSaved = false;
